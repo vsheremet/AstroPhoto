@@ -65,3 +65,29 @@ visible (4056, 6096)
 jpg offset from raw: 84 46
 jpg offset from visible: 12 12
 """
+
+plt.figure()
+NY,NX,NC=rgbraw.shape
+x=np.arange(NX)
+plt.plot(x,rgbraw[jr,:,0],'r-')
+plt.plot(x,rgbraw[jr,:,1],'g-')
+plt.plot(x,rgbraw[jr,:,2],'b-')
+NY,NX,NC=rgbjpg.shape
+x=np.arange(NX)
+plt.plot(x,rgbjpg[jj,:,0],'m-')
+plt.plot(x,rgbjpg[jj,:,1],'y-')
+plt.plot(x,rgbjpg[jj,:,2],'c-')
+plt.show()
+
+plt.figure()
+NY,NX,NC=rgbraw.shape
+y=np.arange(NY)
+plt.plot(y,rgbraw[:,ir,0],'r-')
+plt.plot(y,rgbraw[:,ir,1],'g-')
+plt.plot(y,rgbraw[:,ir,2],'b-')
+NY,NX,NC=rgbjpg.shape
+y=np.arange(NY)
+plt.plot(y,rgbjpg[:,ij,0],'m-')
+plt.plot(y,rgbjpg[:,ij,1],'y-')
+plt.plot(y,rgbjpg[:,ij,2],'c-')
+plt.show()
